@@ -1,0 +1,11 @@
+package com.matthew_cloud.javaSdk;
+import java.io.*;
+import java.net.*;
+public class login {
+	String otp;
+	public login(String username, String password) {
+		try {
+			URL getotp = new URL("http://localhost:3001/login/api/getotp");
+		}
+	}
+}

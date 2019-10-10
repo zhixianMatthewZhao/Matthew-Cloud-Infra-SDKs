@@ -1,0 +1,19 @@
+package com.matthew_cloud.javaSdk;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class otpMgr implements Runnable{
+	String user = login.getUser();
+	String passwd = login.getPasswd();
+	public void run() {
+		`
+
+	}
+
+}
+
+}

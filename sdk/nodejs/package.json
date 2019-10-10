@@ -1,0 +1,11 @@
+{
+  "name": "nodejscloudsdk",
+  "version": "1.0.0",
+  "description": "node js Matthew cloud infrastructure sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zhixiang Zhao",
+  "license": "UNLICENSED"
+}

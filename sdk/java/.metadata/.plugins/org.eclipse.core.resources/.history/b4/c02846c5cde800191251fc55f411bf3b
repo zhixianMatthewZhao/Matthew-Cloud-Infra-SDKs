@@ -1,0 +1,20 @@
+package com.matthew_cloud.javaSdk;
+import java.io.*;
+import java.net.*;
+public class login {
+	private String otp;
+	String user;
+	String passwd;
+	public login(String username, String password){
+		user = username;
+		passwd = password;
+		
+	}
+	public String getUser() 
+	{
+		return user;
+	}
+	public String getPasswd() {
+		return passwd;
+	}
+}

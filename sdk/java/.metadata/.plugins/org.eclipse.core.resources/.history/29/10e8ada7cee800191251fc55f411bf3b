@@ -1,0 +1,23 @@
+package com.matthew_cloud.javaSdk;
+public class login {
+	private String otp;
+	static String  user;
+	static String  passwd;
+	public login(String username, String password){
+		user = username;
+		passwd = password;
+		
+	}
+	public static String getUser() 
+	{
+		return user;
+	}
+	public static String getPasswd() {
+		return passwd;
+	}
+	public void otpUpdate() {
+		otpMgr t = new otpMgr();
+		t.run();
+		
+	}
+}

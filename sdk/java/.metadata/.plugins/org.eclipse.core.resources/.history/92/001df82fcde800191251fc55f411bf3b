@@ -1,0 +1,39 @@
+package com.matthew_cloud.javaSdk;
+import java.io.*;
+import java.net.*;
+public class login {
+	private final otp;
+	String user;
+	String passwd;
+	public login(String username, String password){
+		user = username;
+		passwd = password;
+	}
+	public void getOtp() {
+		try {
+			URL getotp = new URL("http://localhost:3001/login/api/getotp");
+			HttpURLConnection conn = (HttpURLConnection) getotp.openConnection();
+			conn.setRequestMethod("POST");
+			conn.setDoInput(true);
+			conn.setDoOutput(true);
+			StringBuffer query = new StringBuffer();
+			query.append("username=");
+			query.append(user);
+			query.append("password=");
+			query.append(passwd);
+			OutputStream out = conn.getOutputStream();
+			out.write(query.toString().getBytes());
+			out.flush();
+			BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			otp = in.readLine();
+			if (otp.intern() == "None") {
+				System.exit(1);
+				throw new IllegalArgumentException("incorrect identifier");
+			}
+		}
+		catch (Exception e) {
+			throw new IllegalArgumentException("something went wrong, please reinstall the SDK");
+		}
+		
+	}
+}
